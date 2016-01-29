@@ -11,10 +11,10 @@ object TutorialApp extends JSApp {
     jQuery("""<button type="button">Click me!</button>""")
       .click(addClickedMessage _)
       .appendTo(jQuery("body"))
+    jQuery("body").append("<p>Hello World</p>")
   }
 
-  @JSExport
   def addClickedMessage(): Unit = {
-    jQuery("body").append("<p>[message]</p>")
+    jQuery("body").append("<p>You clicked the button!</p>")
   }
 }
